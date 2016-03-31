@@ -31,7 +31,7 @@ public class Login extends JFrame {
         //Create text scroll pane;
         JScrollPane scrollPaneText = new JScrollPane (textArea);
         scrollPaneText.setMinimumSize(new Dimension(600,300));
-        
+	//here is my edit        
         //Create buttons
         JButton loginButton = new JButton ("Login");
         JLabel user = new JLabel("Username");
