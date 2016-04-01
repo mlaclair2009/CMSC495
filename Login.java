@@ -23,22 +23,22 @@ public class Login extends JFrame {
 	JTextArea textArea = new JTextArea ();
 	HashMap <String, String> hm = new HashMap <String, String>();
 	boolean login = false;
-    
-    
-    public Login () throws IOException { 
+
+
+    public Login () throws IOException {
     	hm.put("admin", "1234");
-        
+
         //Create text scroll pane;
         JScrollPane scrollPaneText = new JScrollPane (textArea);
         scrollPaneText.setMinimumSize(new Dimension(600,300));
-	//here is my edit        
+     
         //Create buttons
         JButton loginButton = new JButton ("Login");
         JLabel user = new JLabel("Username");
         JTextField username = new JTextField (15);
         JLabel pass = new JLabel("Password");
         JTextField password = new JTextField (15);
-        
+
         //Create panel/add buttons to panels
         JPanel panel1 = new JPanel ();
         panel1.add(user);
@@ -48,7 +48,7 @@ public class Login extends JFrame {
         panel1.add (loginButton);
         add (panel1, BorderLayout.PAGE_START);
         add (textArea, BorderLayout.CENTER);
-        
+
     	//Create GUI
         setTitle ("Welcome to LOG");
         setSize (800, 600);
@@ -56,7 +56,7 @@ public class Login extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
         validate ();
-        
+
         //Add listeners to buttons
         loginButton.addActionListener ( new ActionListener () {
             public void actionPerformed (ActionEvent e) {
@@ -64,7 +64,7 @@ public class Login extends JFrame {
             }
         });
     }//End GUI constructor
-    
+
     //Login verification
     protected void verifyLogin(String user, String pass) {
 		if (hm.containsKey(user) && hm.get(user).equals(pass)){;
